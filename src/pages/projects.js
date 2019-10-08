@@ -9,6 +9,15 @@ console.log("TCL: data", data)
   return (
     <Layout>
       <div>
+        <h1
+          css={css`
+            display: inline-block;
+            border-bottom: 1px solid;
+          `}
+        >
+          Projects
+        </h1>
+
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
@@ -43,7 +52,6 @@ console.log("TCL: data", data)
 
 export const query = graphql`
 {
-
     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
       totalCount
       edges {
@@ -63,18 +71,5 @@ export const query = graphql`
         }
       }
     }
-
-    allDevArticles {
-      edges {
-        node {
-          article {
-            title
-            created_at
-            body_markdown
-          }
-        }
-      }
-    }
-    
   }
 `

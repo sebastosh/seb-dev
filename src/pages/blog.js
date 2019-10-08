@@ -9,10 +9,19 @@ console.log("TCL: data", data)
   return (
     <Layout>
       <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        <h1
+          css={css`
+            display: inline-block;
+            border-bottom: 1px solid;
+          `}
+        >
+          Blog
+        </h1>
+
+        {data.allDevArticles.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
-              to={node.fields.slug}
+              to={node.article.slug}
               css={css`
                 text-decoration: none;
                 color: inherit;
@@ -23,16 +32,16 @@ console.log("TCL: data", data)
                   margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                {node.frontmatter.title}{" "}
+                {node.article.title}
                 <span
                   css={css`
                     color: #bbb;
                   `}
                 >
-                  — {node.frontmatter.date}
+                  — {node.article.readable_publish_date}
                 </span>
               </h3>
-              <p>{node.excerpt}</p>
+              <div>{node.body_html}</div>
             </Link>
           </div>
         ))}
@@ -43,38 +52,17 @@ console.log("TCL: data", data)
 
 export const query = graphql`
 {
-
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
+  allDevArticles {
+    edges {
+      node {
+        article {
+          title
+          readable_publish_date
+          slug
           id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
-          internal {
-            content
-          }
         }
       }
     }
-
-    allDevArticles {
-      edges {
-        node {
-          article {
-            title
-            created_at
-            body_markdown
-          }
-        }
-      }
-    }
-    
+  }
   }
 `
