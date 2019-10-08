@@ -5,10 +5,12 @@ import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-console.log("TCL: data", data)
+  console.log("index: data", data)
   return (
     <Layout>
       <div>
+        <div>{data.site.siteMetadata.description}</div>
+  
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
@@ -18,12 +20,14 @@ console.log("TCL: data", data)
                 color: inherit;
               `}
             >
+               <img src={`/${node.frontmatter.image}`} alt={node.frontmatter.title} />
+
               <h3
                 css={css`
                   margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                {node.frontmatter.title}{" "}
+                {node.frontmatter.title}
                 <span
                   css={css`
                     color: #bbb;
@@ -42,16 +46,24 @@ console.log("TCL: data", data)
 }
 
 export const query = graphql`
-{
-
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+  {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM, YYYY")
+            demo
+            github
+            image
+            website
           }
           fields {
             slug
@@ -63,7 +75,6 @@ export const query = graphql`
         }
       }
     }
-
     allDevArticles {
       edges {
         node {
@@ -75,6 +86,5 @@ export const query = graphql`
         }
       }
     }
-    
   }
 `

@@ -19,7 +19,7 @@ console.log("TCL: data", data)
         </h1>
 
         {data.allDevArticles.edges.map(({ node }) => (
-          <div key={node.id}>
+          <div key={node.article.id}>
             <Link
               to={node.article.slug}
               css={css`
@@ -27,6 +27,7 @@ console.log("TCL: data", data)
                 color: inherit;
               `}
             >
+              <img src={node.article.social_image} alt="" />
               <h3
                 css={css`
                   margin-bottom: ${rhythm(1 / 4)};
@@ -58,6 +59,7 @@ export const query = graphql`
         article {
           title
           readable_publish_date
+          social_image
           slug
           id
         }

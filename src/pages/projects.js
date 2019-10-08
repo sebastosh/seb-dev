@@ -27,6 +27,9 @@ console.log("TCL: data", data)
                 color: inherit;
               `}
             >
+
+<img src={`/${node.frontmatter.image}`} alt={node.frontmatter.title} />
+
               <h3
                 css={css`
                   margin-bottom: ${rhythm(1 / 4)};
@@ -59,7 +62,11 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM, YYYY")
+            demo
+            github
+            image
+            website
           }
           fields {
             slug
