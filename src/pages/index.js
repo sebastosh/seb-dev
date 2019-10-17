@@ -1,34 +1,42 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from '../components/layout'
-import projects from '../../data/projectData'
-import ProjectListing from '../components/ProjectListing'
+import Helmet from "react-helmet"
+import Layout from "../components/layout"
+import projects from "../../data/projectData"
+import ProjectListing from "../components/ProjectListing"
+import SEO from "../components/SEO"
+import config from "../../data/SiteConfig"
 
 export default ({ data }) => {
   console.log("index: data", data)
   return (
     <Layout>
-      <div>
-        <div>{data.site.siteMetadata.description}</div>
-  
+      <Helmet
+        title={`${config.siteTitle} – Web Developer & Cultural Producer`}
+      />
+      <SEO />
+      <div className="container">
+        <div className="elevator">
+          <h1>I'm {config.userName}</h1>
+          <p>{config.siteDescription}</p>
+        </div>
+
         <section className="section">
-            <h2>Projects</h2>
-            <ProjectListing projects={projects} />
-          </section>
+          <h2>Projects</h2>
+          <ProjectListing projects={projects} />
+        </section>
 
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-    
-            >
-               <img src={`/${node.frontmatter.image}`} alt={node.frontmatter.title} />
+            <Link to={node.fields.slug}>
+              <img
+                src={`/${node.frontmatter.image}`}
+                alt={node.frontmatter.title}
+              />
 
               <h3>
                 {node.frontmatter.title}
-                <span>
-                  — {node.frontmatter.date}
-                </span>
+                <span>— {node.frontmatter.date}</span>
               </h3>
               <p>{node.excerpt}</p>
             </Link>

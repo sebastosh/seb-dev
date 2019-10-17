@@ -1,15 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import config from '../../data/SiteConfig'
 
 
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1>
+    <div className="container">
+    <h1>About {config.userName}</h1>
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      {config.about}
     </p>
+    </div>
   </Layout>
 )
 

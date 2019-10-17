@@ -29,7 +29,8 @@
     "react-dom": "^16.10.2",
     "react-github-btn": "^1.0.6",
     "react-helmet": "^5.2.1",
-    "sass": "^1.23.0"
+    "sass": "^1.23.0",
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
