@@ -1,7 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
@@ -10,10 +8,7 @@ console.log("TCL: data", data)
     <Layout>
       <div>
         <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
+          
         >
           Blog
         </h1>
@@ -22,22 +17,14 @@ console.log("TCL: data", data)
           <div key={node.article.id}>
             <Link
               to={node.article.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
+              
             >
               <img src={node.article.social_image} alt="" />
               <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
               >
                 {node.article.title}
                 <span
-                  css={css`
-                    color: #bbb;
-                  `}
+                  
                 >
                   — {node.article.readable_publish_date}
                 </span>

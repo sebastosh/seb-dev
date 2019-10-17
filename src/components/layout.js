@@ -1,68 +1,41 @@
 import React from "react"
-import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
 import "./layout.css"
+
 export default ({ children }) => {
-const data = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
-    query {
+      query {
         site {
-            siteMetadata {
-                title
-            }
+          siteMetadata {
+            title
+          }
         }
-    }
+      }
     `
-)
+  )
 
-
-    return (
-        <div
-          css={css`
-            margin: 0 auto;
-            max-width: 700px;
-            padding: ${rhythm(2)};
-            padding-top: ${rhythm(1.5)};
-          `}
-        >
-          <Link to={`/`}>
-            <div
-              css={css`
-                margin-bottom: ${rhythm(2)};
-                display: inline-block;
-                font-style: normal;
-              `}
-            >
-              {data.site.siteMetadata.title}
-            </div>
-          </Link>
-          <Link
-            to={`/blog/`}
-            css={css`
-              float: right;
-            `}
-          >
-            Blog
-          </Link>
-          <Link
-            to={`/projects/`}
-            css={css`
-              float: right;
-            `}
-          >
+  return (
+    <div>
+      <div className="site-header">
+        <Link to={`/`}>
+          <div className="site-title">{data.site.siteMetadata.title}</div>
+        </Link>
+        <div className="site-nav">
+          <Link className="site-nav-item" to={`/projects/`}>
             Projects
           </Link>
-          <Link
-            to={`/contact/`}
-            css={css`
-              float: right;
-            `}
-          >
+
+          <Link className="site-nav-item" to={`/blog/`}>
+            Blog
+          </Link>
+
+          <Link className="site-nav-item" to={`/contact/`}>
             Contact
           </Link>
-          {children}
         </div>
-      )
+      </div>
+      {children}
+    </div>
+  )
 }
-

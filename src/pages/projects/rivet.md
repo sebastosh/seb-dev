@@ -4,7 +4,7 @@ github: ""
 demo: ""
 website: "https://rivet.es/"
 date: "2018-06-01"
-image: "rivet.jpg"
+image: "images/rivet.jpg"
 ---
 
 Pandas are really sweet.

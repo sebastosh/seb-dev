@@ -1,8 +1,8 @@
 import React from "react"
-import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
-import Layout from "../components/layout"
+import Layout from '../components/layout'
+import projects from '../../data/projectData'
+import ProjectListing from '../components/ProjectListing'
 
 export default ({ data }) => {
   console.log("index: data", data)
@@ -11,28 +11,22 @@ export default ({ data }) => {
       <div>
         <div>{data.site.siteMetadata.description}</div>
   
+        <section className="section">
+            <h2>Projects</h2>
+            <ProjectListing projects={projects} />
+          </section>
+
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
               to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
+    
             >
                <img src={`/${node.frontmatter.image}`} alt={node.frontmatter.title} />
 
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
+              <h3>
                 {node.frontmatter.title}
-                <span
-                  css={css`
-                    color: #bbb;
-                  `}
-                >
+                <span>
                   — {node.frontmatter.date}
                 </span>
               </h3>

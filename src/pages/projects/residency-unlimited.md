@@ -4,7 +4,7 @@ github: "https://github.com/sebastosh/residency-unlimited"
 demo: ""
 website: "http://residencyunlimited.org"
 date: "2017-12-31"
-image: "ru.jpg"
+image: "images/ru.jpg"
 ---
 
 Pandas are really sweet.

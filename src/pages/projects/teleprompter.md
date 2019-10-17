@@ -4,7 +4,7 @@ github: "https://github.com/sebastosh/teleprompter-app"
 demo: ""
 website: ""
 date: "2019-06-21"
-image: "teleprompter.png"
+image: "images/teleprompter.png"
 ---
 
 Pandas are really sweet.

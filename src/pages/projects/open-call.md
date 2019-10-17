@@ -4,7 +4,7 @@ github: "https://github.com/sebastosh/open-call"
 demo: "https://glacial-falls-33377.herokuapp.com/"
 website: ""
 date: "2019-07-11"
-image: "open-call.jpg"
+image: "images/open-call.jpg"
 ---
 
 Do Pandas eat bananas? Check out this short video that shows that yes! pandas do

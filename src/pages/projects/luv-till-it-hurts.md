@@ -4,7 +4,7 @@ github: "https://github.com/sebastosh/luv-till-it-hurts"
 demo: ""
 website: "http://luvhurts.co/"
 date: "2018-10-01"
-image: "luvhurtsco.jpg"
+image: "images/luvhurtsco.jpg"
 ---
 
 Pandas are really sweet.
