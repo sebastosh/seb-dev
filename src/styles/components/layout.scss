@@ -492,7 +492,6 @@ h2.publication-company {
 
   
     .each {
-      display: inline;
       width:100%;
       padding: 0;
     }
@@ -519,7 +518,6 @@ h2.publication-company {
  
 
   .each {
-    display: inline;
     width:52%;
     padding: 0;
   }
@@ -567,52 +565,31 @@ h2.publication-company {
     padding: 0.5rem;
     font-size: 1rem;
   }
-  .tags ul {
+
+  .tags-container {
+    margin: 15px 0;
+  }
+  .tags {
     font-size: .8em;
-    padding: 0;
-    margin: 0 0 1em; 
+    padding: .2em .5em;
+    margin: 2px;
+    border: 1px solid grey;
     display: inline-block;}
-  
-  .tags li {
-    padding: 8px;
-    margin: 5px 5px 5px 0;
-    border: 1px solid;
-    list-style-type: none; }
-
-
-
-  
+ 
 }
 
 .skill {
-  display: grid;
-  grid-column-gap: 20px;
-  grid-template-columns: auto auto;
-   font-size: 1.3em;
-}
-
-.skill ul {
-  padding: 0;
-  margin: 0;
-}
-
-.skill li {
-  
-  padding: 8px;
-  display: inline-block;
-  margin: 0 5px 10px 0;
-
-}
+  font-size: 1.3em;
+  padding: .2em .5em;
+  display: inline-block; }
 
 .resume {
-  color: #23b3ca;
- display: flex;
- flex-direction: column;
-}
+  margin: 2em 0;
+  
+  display: flex;
+  flex-direction: column; }
 
-.resume a {
-  color: #23b3ca;
-}
+
 
 @include small-breakpoint {
   .projects {

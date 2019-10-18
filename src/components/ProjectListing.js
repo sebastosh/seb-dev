@@ -30,12 +30,14 @@ export default class ProjectListing extends Component {
             
             
                           
-              <div className="tags">
+              <div className="tags-container">
+              
               { project.tags.map(tag => (
-                    <ul>
-                      <li>{tag}</li>
-                    </ul>
+                   
+                      <div className="tags">{tag}</div>
+                   
                 ))}
+
               </div>
               <div className="buttons">
                 <GitHubButton href={project.source} data-size="large" >

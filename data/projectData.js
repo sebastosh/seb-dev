@@ -20,7 +20,7 @@ export default [
   {
     icon: '🖥',
     title: 'Teleprompter',
-    path: 'http://teleprompter.sebastiensanzdesantamaria.net/',
+    path: 'https://serene-jackson-8a61ec.netlify.com/',
     source: 'https://github.com/sebastosh/teleprompter-app',
     description: 'Teleprompter interface allowing a speaker to read scripts.',
     tags: ['JavaScript', 'QuillJS', 'Rails API'],
