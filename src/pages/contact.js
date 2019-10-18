@@ -1,12 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import config from "../../data/SiteConfig"
-
 import { TinyLetter } from 'react-tinyletter';
-
-
-
 
 export default ({ data }) => {
   console.log('contatconfig: ', config);
@@ -20,7 +15,7 @@ export default ({ data }) => {
 
         <section className="section">
 <div>Email: <a mailto="seb[at]sebastiensanzdesantamaria[dot]net" title="Email">
-            seb[at]sebastiensanzdesantamaria[dot]net 
+            seb@sebastiensanzdesantamaria.net 
           </a></div>
 <div>GitHub: <a href="https://github.com/sebastosh" title="Seb on GitHub">
             sebastosh

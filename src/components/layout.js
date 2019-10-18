@@ -12,7 +12,6 @@ export default class MainLayout extends Component {
   render() {
     const { dark, notFound } = this.context
     const { children } = this.props
-    console.log('children: ', children);
     
     let themeClass = ''
     

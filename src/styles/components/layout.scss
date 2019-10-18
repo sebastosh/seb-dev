@@ -578,7 +578,40 @@ h2.publication-company {
     margin: 5px 5px 5px 0;
     border: 1px solid;
     list-style-type: none; }
+
+
+
   
+}
+
+.skill {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+   font-size: 1.3em;
+}
+
+.skill ul {
+  padding: 0;
+  margin: 0;
+}
+
+.skill li {
+  
+  padding: 8px;
+  display: inline-block;
+  margin: 0 5px 10px 0;
+
+}
+
+.resume {
+  color: #23b3ca;
+ display: flex;
+ flex-direction: column;
+}
+
+.resume a {
+  color: #23b3ca;
 }
 
 @include small-breakpoint {

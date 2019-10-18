@@ -11,9 +11,11 @@ const config = {
   siteDescription:
     'web developer and cultural producer.',
   about: 'Full Stack Web Developer currently focused on Ruby, Javascript, and Front-End Frameworks. Experienced Co-Founder | Producer with a demonstrated history of working in the arts sector. Strives for creative process, mastering hard things, and nurturing an open and inclusive community.',
+  skills: ["Ruby on Rails", "Javascript", "React", "RESTful APIs", "JSON", "JWT Auth", "Postgres", "MongoDB", "Wordpress", "HTML", "Git", "Figma", "Adobe"],
+  resume: 'SebastienSanzdeSantamariaResume2019.pdf' ,
   siteRss: '/rss.xml',
-  googleAnalyticsID: 'UA-42068444-1',
-  postDefaultCategoryID: 'Tech',
+  googleAnalyticsID: '',
+
   newsletter: 'https://tinyletter.com/sebastiensanzdesantamaria',
   newsletterEmbed: '',
   userName: 'Seb',

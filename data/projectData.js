@@ -6,7 +6,7 @@ export default [
     source: 'https://github.com/sebastosh/synth-session',
     description: 'Multi-synthesizer jamming sessions app.',
     tags: ['ReactJS', 'ToneJS', 'NexusUI', 'Rails API', 'JWT', 'Auth'],
-    image: 'images/synth-sessions.png'
+    image: '../images/synth-sessions.png'
   },
   {
     icon: '🖼',
@@ -15,7 +15,7 @@ export default [
     source: 'https://github.com/sebastosh/open-call/',
     description: 'System for art portfolio applications.',
     tags: ['ReactJS', 'Rails API', 'JWT', 'AWS S3'],
-    image: 'images/open-call.jpg'
+    image: '../images/open-call.jpg'
   },
   {
     icon: '🖥',
@@ -24,7 +24,7 @@ export default [
     source: 'https://github.com/sebastosh/teleprompter-app',
     description: 'Teleprompter interface allowing a speaker to read scripts.',
     tags: ['JavaScript', 'QuillJS', 'Rails API'],
-    image: 'images/teleprompter.png'
+    image: '../images/teleprompter.png'
   },
   {
     icon: '🔩',
@@ -33,7 +33,7 @@ export default [
     source: 'https://github.com/sebastosh/rivet/',
     description: 'A marketplace built to find opportunities & advance creative practices.',
     tags: ['Entrepreneurship', 'Product Management', 'Design'],
-    image: 'images/rivet.jpg'
+    image: '../images/rivet.jpg'
   },
   {
     icon: '🏙',
@@ -42,7 +42,7 @@ export default [
     source: 'https://github.com/sebastosh/residency-unlimited/',
     description: 'A CMS for non-profit arts organization with front-end publishing and commerce platforms.',
     tags: ['PHP', 'Wordpress', 'CSS', 'HTML'],
-    image: 'images/ru.jpg'
+    image: '../images/ru.jpg'
   },
   {
     icon: '💔',
@@ -51,7 +51,7 @@ export default [
     source: 'https://github.com/sebastosh/luv-till-it-hurts/',
     description: 'A global interplanetary artist-led project on HIV & stigma.',
     tags: [ 'Wordpress', 'Cultural Production', 'Exhibitions' ],
-    image: 'images/luvhurtsco.jpg'
+    image: '../images/luvhurtsco.jpg'
   }
 ]
 
