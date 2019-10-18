@@ -17,8 +17,7 @@ export default ({ data }) => {
       <SEO />
       <div className="container">
         <div className="elevator">
-          <h1>I'm {config.userName}</h1>
-          <p>{config.siteDescription}</p>
+          <h1>I'm {config.userName}, {config.siteDescription}</h1>
         </div>
 
         <section className="section">
@@ -26,7 +25,7 @@ export default ({ data }) => {
           <ProjectListing projects={projects} />
         </section>
 
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {/* {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug}>
               <img
@@ -41,7 +40,7 @@ export default ({ data }) => {
               <p>{node.excerpt}</p>
             </Link>
           </div>
-        ))}
+        ))} */}
       </div>
     </Layout>
   )

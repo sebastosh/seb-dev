@@ -9,7 +9,7 @@ const config = {
   dateFromFormat: 'YYYY-MM-DD',
   dateFormat: 'MMMM Do, YYYY',
   siteDescription:
-    'Web developer and cultural producer.',
+    'web developer and cultural producer.',
   about: 'Full Stack Web Developer currently focused on Ruby, Javascript, and Front-End Frameworks. Experienced Co-Founder | Producer with a demonstrated history of working in the arts sector. Strives for creative process, mastering hard things, and nurturing an open and inclusive community.',
   siteRss: '/rss.xml',
   googleAnalyticsID: 'UA-42068444-1',
@@ -23,10 +23,6 @@ const config = {
     {
       name: 'About',
       link: '/about/',
-    },
-    {
-      name: 'Projects',
-      link: '/projects/',
     },
     {
       name: 'Blog',

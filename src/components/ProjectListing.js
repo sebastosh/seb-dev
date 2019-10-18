@@ -7,37 +7,52 @@ export default class ProjectListing extends Component {
 
     return (
       <section className="projects">
+
         {projects.map(project => (
- 
-          <div className="each" key={project.title}>
-           
+
+        <div className="each-project" key={project.title} >
+
+            <img className="image" src={project.image} alt={project.title} />
+
+            <div className="each" key={project.title} >
+            
               <a
                 className="project-link"
                 href={project.source}
                 target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="project-icon">{project.icon}</div>
-                <div className="project-title">{project.title}</div>
-              </a>
-            
-            <p>{project.description}</p>
-            <div className="buttons">
-              <GitHubButton href={project.source} data-size="large" >
-                Source
-              </GitHubButton>
-              {project.path && (
-                <a className="button" href={project.path} target="_blank" rel="noopener noreferrer">
-                  View
-                </a>
-              )}
-            </div>
-           { project.tags.map(tag => (
+                rel="noopener noreferrer">
               
-                <div className="project-tag">{tag}</div>
-            ))}
+                <h2 className="project-title">{project.title}</h2>
+              </a>
+
+            
+              <p>{project.description}</p>
+            
+            
+                          
+              <div className="tags">
+              { project.tags.map(tag => (
+                    <ul>
+                      <li>{tag}</li>
+                    </ul>
+                ))}
+              </div>
+              <div className="buttons">
+                <GitHubButton href={project.source} data-size="large" >
+                  Source
+                </GitHubButton>
+                {project.path && (
+                  <a className="button" href={project.path} target="_blank" rel="noopener noreferrer">
+                    View
+                  </a>
+                )}
+              </div>
+              
+
           </div>
+        </div>
         ))}
+
       </section>
     )
   }

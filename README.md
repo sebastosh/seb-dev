@@ -2,8 +2,9 @@
 
 
 # Sebastien Sanz de Santamaria's Portfolio
+[Gatsby Starter](https://github.com/gatsbyjs/gatsby-starter-default)
 
-### Gatsby Starter + [Tania Rascia's personal website](https://github.com/taniarascia/taniarascia.com/) 
+[Tania Rascia](https://github.com/taniarascia/taniarascia.com/) 
 
 
 

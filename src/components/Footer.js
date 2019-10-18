@@ -16,9 +16,9 @@ export default class Footer extends Component {
             Patreon
           </a>*/}
           <Link to="/newsletter">Newsletter</Link>
-          <a href="https://www.taniarascia.com/rss.xml" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://sebastiensanzdesantamaria.net/rss.xml" target="_blank" rel="noopener noreferrer">
             RSS
-          </a>
+          </a> */}
         </div>
         <div>
           <a href="https://github.com/sebastosh" title="Seb on GitHub">

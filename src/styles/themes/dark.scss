@@ -439,7 +439,23 @@ $dark-border: darken($background, 3%);
   }
 
   ::selection {
-    background: $primary-color;
+    background: #2331f1;
     color: white;
   }
+
+  .tags ul {
+    font-size: .8em;
+    padding: 0;
+    margin: 0; 
+    display: inline-block;}
+  
+  .tags li {
+    color: white;
+    padding: 8px;
+  
+    margin: 5px 5px 5px 0;
+    border: 1px solid white;
+    list-style-type: none; }
+  
 }
+

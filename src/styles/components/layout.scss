@@ -477,11 +477,21 @@ h2.publication-company {
 }
 
 .projects {
-  .each {
+
+  .each-project {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 0.5rem 0;
+  }
+
+  .image {
+    width:46%;
+  }
+
+  .each {
+    display: inline;
+    width:52%;
+    padding: 0;
   }
 
   h2 {
@@ -527,12 +537,24 @@ h2.publication-company {
     padding: 0.5rem;
     font-size: 1rem;
   }
+  .tags ul {
+    font-size: .8em;
+    padding: 0;
+    margin: 0; 
+    display: inline-block;}
+  
+  .tags li {
+    padding: 8px;
+    margin: 5px 5px 5px 0;
+    border: 1px solid;
+    list-style-type: none; }
+  
 }
 
 @include small-breakpoint {
   .projects {
     .each {
-      display: flex;
+      display: inline;
       justify-content: space-between;
       padding: 1rem 0;
       border-bottom: 2px solid $light;
@@ -1122,6 +1144,6 @@ button[disabled] {
 }
 
 ::selection {
-  background: rgba(255, 235, 20, 0.7);
-  color: #111;
+  background: rgba(56, 105, 209, 0.781);
+  color: rgb(233, 233, 233);
 }
