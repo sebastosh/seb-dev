@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-// import netlify from '../../content/images/netlify.png'
-// import gatsby from '../../content/thumbnails/gatsby.png'
+import linkedin from '../images/linkedin.svg'
+import twitter from '../images/twitter.svg'
+import devto from '../images/dev-dot-to.svg'
 import github from '../images/github.svg'
 
 export default class Footer extends Component {
+
   render() {
     return (
       <footer className="footer container">
@@ -30,6 +32,34 @@ export default class Footer extends Component {
               alt="GitHub"
             />
           </a>
+          <a href="https://www.linkedin.com/in/sebastiensanzdesantamaria/" title="Seb on Linkedin">
+            <img
+              src={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="Linkedin"
+            />
+          </a>
+          <a href="https://dev.to/sebsanzdesant" title="Seb on Dev.to">
+            <img
+              src={devto}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="Dev.to"
+            />
+          </a>
+          <a href="https://twitter.com/sebsanzdesant" title="Seb on Twitter">
+            <img
+              src={twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="Twitter"
+            />
+          </a>
+          
           {/* <a href="https://www.netlify.com/" title="Hosted by Netlify">
             <img
               src={netlify}

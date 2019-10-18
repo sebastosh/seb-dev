@@ -5,7 +5,7 @@ export default [
     path: 'https://still-mountain-88882.herokuapp.com/',
     source: 'https://github.com/sebastosh/synth-session',
     description: 'Multi-synthesizer jamming sessions app.',
-    tags: ['ReactJS', 'ToneJS', 'NexusUI', 'Rails', 'API', 'JWT', 'Auth'],
+    tags: ['ReactJS', 'ToneJS', 'NexusUI', 'Rails API', 'JWT', 'Auth'],
     image: 'images/synth-sessions.png'
   },
   {

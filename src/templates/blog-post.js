@@ -3,45 +3,39 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-console.log("TCL: blog post data", data)
+  console.log("TCL: blog post data", data)
 
- const post = data.devArticles.article
- console.log('post: ', post);
+  const post = data.devArticles.article
+  console.log("post: ", post)
   return (
     <Layout>
-      <div>
-      <img src={post.social_image} alt="" />
-        <h1>{post.title}</h1>
-        <h2>{post.readable_publish_date}</h2>
-        {post.tags.map(( tag => (
-          <div>
-    
-              <h3>
- 
-                {tag}
+      <div className="container">
+      <section className="section">
+      <h1>{post.title}</h1>
+        <h4>{post.readable_publish_date}</h4>
+        <img className="blog-image" src={post.social_image} alt="" />
 
-              </h3>
-              
-         
-          </div>
-        )))}
+        {post.tags.map(tag => (
+          <span classname="project-title">{tag}</span>
+        ))}
         <div dangerouslySetInnerHTML={{ __html: post.body_html }} />
+        </section>
+     
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-query MyQuery($slug: String!) {
-  devArticles(article: { slug: { eq: $slug } }) {
-    article {
-      social_image
-      body_html
-      title
-      tags
-      readable_publish_date
+  query MyQuery($slug: String!) {
+    devArticles(article: { slug: { eq: $slug } }) {
+      article {
+        social_image
+        body_html
+        title
+        tags
+        readable_publish_date
+      }
     }
   }
-}
-
 `

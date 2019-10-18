@@ -7,7 +7,7 @@
 @include small-breakpoint {
   #main-content {
     margin-top: 92px;
-    padding: 60px 0 0;
+    padding: 40px 0 0;
     min-height: calc(100vh - 219px);
   }
 }
@@ -476,6 +476,33 @@ h2.publication-company {
   }
 }
 
+@include small-breakpoint {
+  .projects {
+
+    .each-project {
+      display: block;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+    }
+  
+    .image {
+      width:100%;
+    }
+
+
+  
+    .each {
+      display: inline;
+      width:100%;
+      padding: 0;
+    }
+  }
+}
+
+.blog-image {
+  width:100%;
+}
+
 .projects {
 
   .each-project {
@@ -487,6 +514,8 @@ h2.publication-company {
   .image {
     width:46%;
   }
+
+ 
 
   .each {
     display: inline;
