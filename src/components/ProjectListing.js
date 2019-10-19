@@ -12,7 +12,12 @@ export default class ProjectListing extends Component {
 
         <div className="each-project" key={project.title} >
 
-            <img className="image" src={project.image} alt={project.title} />
+<a
+                className="project-link"
+                href={project.source}
+                target="_blank"
+                rel="noopener noreferrer">
+              <img className="image" src={project.image} alt={project.title} /></a>
 
             <div className="each" key={project.title} >
             

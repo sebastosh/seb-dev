@@ -19,6 +19,35 @@
   margin-right: auto;
 }
 
+.image {
+  width: 100%;
+  padding: 0 15px 0 0; 
+}
+
+.dev-post img{
+  width: 100%;
+}
+
+.blog-tags {
+  display: inline;
+  margin-right: 1.5em;
+}
+
+.blog-meta {
+  display: inline;
+  margin-right: 0.5em;
+}
+
+.blog-index-title {
+  font-size: 2em;
+}
+.blog-title-dev {
+  vertical-align:top;
+}
+
+
+
+
 @include small-breakpoint {
   .container {
     padding: 0 2rem;
@@ -155,7 +184,7 @@
 
 @include small-breakpoint {
   .section {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
 }
 
@@ -511,19 +540,9 @@ h2.publication-company {
     margin: 0 0 3em 0;
   }
 
-  .image {
-    width:46%;
-  }
-
- 
-
-  .each {
-    width:52%;
-    padding: 0;
-  }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     border-bottom: none;
     margin: 0 1rem 0 0;
     font-weight: 600;

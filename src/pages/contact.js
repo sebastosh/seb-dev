@@ -1,10 +1,29 @@
 import React from "react"
 import Layout from "../components/layout"
-import config from "../../data/SiteConfig"
-import { TinyLetter } from 'react-tinyletter';
+// import config from "../../data/SiteConfig"
+import { TinyLetter, Email, Submit } from 'react-tinyletter';
+import styled from 'styled-components'
+import tinyletter from '../images/tinyletter.svg'
 
+const StyledEmail = styled(Email)`
+border: 1px solid #ccc;
+font-size: 18px;
+font-weight: 100;
+width: 60%;
+margin-right: .4em;
+display: inline;
+`
+
+const StyledSubmit = styled(Submit)`
+width: 35%;
+&:active {
+  background-color: deepskyblue;
+  color: white;
+}
+`
 export default ({ data }) => {
-  console.log('contatconfig: ', config);
+
+
   return (
     <Layout>
       <div className="container">
@@ -14,7 +33,7 @@ export default ({ data }) => {
         </div>
 
         <section className="section">
-<div>Email: <a mailto="seb[at]sebastiensanzdesantamaria[dot]net" title="Email">
+<div>Email: <a href="mailto:seb[at]sebastiensanzdesantamaria[dot]net" title="Email">
             seb@sebastiensanzdesantamaria.net 
           </a></div>
 <div>GitHub: <a href="https://github.com/sebastosh" title="Seb on GitHub">
@@ -36,9 +55,20 @@ export default ({ data }) => {
         </section>
 
         <section className="section">
-        <h2>Stay in touch (newsletter)</h2>
+        <h2>Stay in touch - <img
+              src={tinyletter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="GitHub"
+            />TinyLetter</h2>
         
-        <TinyLetter list="sebastiensanzdesantamaria"/>
+        <div className="tiny">
+        <TinyLetter list="sebastiensanzdesantamaria">
+        <StyledEmail/>
+  <StyledSubmit/>
+  </TinyLetter>
+        </div>
 
 
         </section>

@@ -66,6 +66,14 @@
   color: darken($yellow, 10%);
 }
 
+.strong {
+  font-weight: bold;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
 // Screen reader text for accessibility
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);

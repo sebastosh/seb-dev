@@ -10,17 +10,23 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="container">
-      <section className="section">
+
       <h1>{post.title}</h1>
-        <h4>{post.readable_publish_date}</h4>
+
+   
+      <div className="blog-tags"><span className="strong" >Date:</span> {post.readable_publish_date}</div>
+      <div className="blog-meta strong">Tags:</div>
+      {post.tags.map(tag => (
+        <div className="blog-tags">{tag}</div>
+      ))}
+
+      <section className="section">
+        
         <img className="blog-image" src={post.social_image} alt="" />
 
-        {post.tags.map(tag => (
-          <span classname="project-title">{tag}</span>
-        ))}
-        <div dangerouslySetInnerHTML={{ __html: post.body_html }} />
+        <div className="dev-post" dangerouslySetInnerHTML={{ __html: post.body_html }} />
         </section>
-     
+        <div>Source Dev.to URL: <a href={post.url} >{post.url}</a></div>
       </div>
     </Layout>
   )
@@ -35,6 +41,7 @@ export const query = graphql`
         title
         tags
         readable_publish_date
+        url
       }
     }
   }
