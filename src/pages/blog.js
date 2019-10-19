@@ -5,7 +5,7 @@ import devto from "../images/dev-dot-to-small-color.png"
 
 
 export default ({ data }) => {
-  console.log("TCL: data", data)
+
   return (
     <Layout>
       <div className="container">

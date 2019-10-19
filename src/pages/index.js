@@ -8,7 +8,7 @@ import SEO from "../components/SEO"
 import config from "../../data/SiteConfig"
 
 export default ({ data }) => {
-  console.log("index: data", data)
+
   return (
     <Layout>
       <Helmet
