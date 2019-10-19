@@ -103,6 +103,10 @@
   display: none;
 }
 
+.elevator {
+  border-bottom: 1px solid grey;
+}
+
 @include small-breakpoint {
   .callouts {
     display: block;
@@ -185,6 +189,7 @@
 @include small-breakpoint {
   .section {
     margin: 2rem 0;
+
   }
 }
 
