@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import config from "../../data/SiteConfig"
 import fileicon from "../images/file.svg"
 import resume from "../images/SebastienSanzdeSantamariaResume2019.pdf"
@@ -19,7 +19,7 @@ export default ({ data }) => (
     
 
         {config.skills.map(tag => (
-          <div className="skill">{tag}</div>
+          <div className="skill" key={tag}>{tag}</div>
         ))}
   
     </div>

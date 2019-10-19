@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Helmet from "react-helmet"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import projects from "../../data/projectData"
 import ProjectListing from "../components/ProjectListing"
 import SEO from "../components/SEO"
@@ -25,67 +24,10 @@ export default ({ data }) => {
           <ProjectListing projects={projects} />
         </section>
 
-        {/* {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <img
-                src={`/${node.frontmatter.image}`}
-                alt={node.frontmatter.title}
-              />
-
-              <h3>
-                {node.frontmatter.title}
-                <span>— {node.frontmatter.date}</span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))} */}
+       
       </div>
     </Layout>
   )
 }
 
-export const query = graphql`
-  {
-    site {
-      siteMetadata {
-        description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM, YYYY")
-            demo
-            github
-            image
-            website
-          }
-          fields {
-            slug
-          }
-          excerpt
-          internal {
-            content
-          }
-        }
-      }
-    }
-    allDevArticles {
-      edges {
-        node {
-          article {
-            title
-            created_at
-            body_markdown
-          }
-        }
-      }
-    }
-  }
-`
+

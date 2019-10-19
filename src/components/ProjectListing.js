@@ -39,7 +39,7 @@ export default class ProjectListing extends Component {
               
               { project.tags.map(tag => (
                    
-                      <div className="tags">{tag}</div>
+                      <div className="tags" key={tag} >{tag}</div>
                    
                 ))}
 

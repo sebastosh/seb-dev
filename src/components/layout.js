@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import ThemeContext from '../context/ThemeContext'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from './Navigation'
+import Footer from './Footer'
 import config from '../../data/SiteConfig'
 import '../styles/main.scss'
 

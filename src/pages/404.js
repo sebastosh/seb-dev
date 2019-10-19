@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import ThemeContext from '../context/ThemeContext'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 
@@ -27,7 +27,8 @@ export default class NotFoundPage extends Component {
         <SEO />
         <div className="container">
           <div className="text-center">
-            <h1>404</h1>
+            <h1>404 - Sorry, no page found</h1>
+         
           </div>
          
         </div>
