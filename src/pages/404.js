@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import ThemeContext from '../context/ThemeContext'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 

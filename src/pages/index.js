@@ -1,6 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import projects from "../../data/projectData"
 import ProjectListing from "../components/ProjectListing"
 import SEO from "../components/SEO"

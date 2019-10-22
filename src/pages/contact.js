@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 // import config from "../../data/SiteConfig"
 import { TinyLetter, Email, Submit } from 'react-tinyletter';
 import styled from 'styled-components'
