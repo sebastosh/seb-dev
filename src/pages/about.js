@@ -18,7 +18,7 @@ export default ({ data }) => (
     <h1>Skills</h1>
     
 
-        {config.skills.map(tag => (
+        {config.techSkills.map(tag => (
           <div className="skill" key={tag}>{tag}</div>
         ))}
   
