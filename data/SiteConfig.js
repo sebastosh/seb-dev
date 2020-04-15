@@ -10,7 +10,7 @@ const config = {
   dateFormat: 'MMMM Do, YYYY',
   siteDescription:
     'web developer and cultural producer.',
-  about: 'I \'m a Full Stack Web Developer with strengths in Javascript, Node.js,  React, and Rails. Experienced Co-Founder | Cultural Producer with a demonstrated history of  history of working in the visual arts field in New York City. Brazenly wide-eyed about creative processes, mastering hard things, and nurturing open and inclusive communities!',
+  about: 'Full Stack Web Developer with strengths in Javascript, Node.js,  React, and Rails. Experienced Co-Founder | Cultural Producer with a demonstrated history of  history of working in the visual arts field in New York City. Brazenly wide-eyed about creative processes, mastering hard things, and nurturing open and inclusive communities!',
   techSkills: ['Javascript', 'Ruby', 'React', 'Ruby on Rails', 'Node.js', 'Gatsby', 'RESTful APIs', 'JSON', 'MySQL', 'PostgreSQL', 'MongoDB', 'PHP', 'Wordpress', 'HTML', 'CSS','Git', 'Figma', 'Adobe'],
   resume: 'SebastienSanzdeSantamariaResumes.pdf' ,
   siteRss: '/rss.xml',
