@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import config from "../../data/SiteConfig"
 import fileicon from "../images/file.svg"
-import resume from "../images/SebastienSanzdeSantamariaResume2019.pdf"
+import resume from "../images/SebastienSanzdeSantamariaResume.pdf"
 
 export default ({ data }) => (
   <Layout>
